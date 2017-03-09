@@ -1,4 +1,6 @@
 class MyThreads::CommentsController < ApplicationController
+  
+  before_action :authenticate_user!
   before_action :set_my_thread
   before_action :set_my_comment, only: [:show, :edit, :update, :destroy]
 
