@@ -1,5 +1,7 @@
 class MyThreadsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
     @my_threads = MyThread.all
   end
