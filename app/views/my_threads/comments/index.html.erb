@@ -6,7 +6,6 @@
     <%=  comment.text %>
     <%= link_to "[EDIT]", edit_my_thread_comment_path(@my_thread.id, comment.id) %>
     <%= link_to "[DELETE]", my_thread_comment_path(@my_thread.id, comment.id), method: :delete, data: {confirm: "are you sure?"} %>
-
   </li>
   <% end %>
 
