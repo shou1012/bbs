@@ -1,0 +1,10 @@
+<%= form_for([@my_thread, @comment]) do |f| %>
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_field :text %>
+    <%= f.hidden_field :my_thread_id %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>

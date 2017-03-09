@@ -1,0 +1,15 @@
+<h1>My Threads</h1>
+
+<ul>
+  <% @my_threads.each do |my_thread| %>
+  <li>
+    <%=  link_to my_thread.title, my_thread_comments_path(my_thread.id) %>
+    <%= link_to "[EDIT]", edit_my_thread_path(my_thread.id) %>
+    <%= link_to "[DELETE]", my_thread_path(my_thread.id), method: :delete, data: {confirm: "are you sure?"} %>
+
+  </li>
+  <% end %>
+
+</ul>
+
+<%= link_to "Add New", new_my_thread_path %>
